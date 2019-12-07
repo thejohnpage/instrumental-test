@@ -78,7 +78,8 @@ export const addCounter = async (url: string) => {
 /**
  * function getEvents
  * @param period
- * @param fromNowFlag
+ * @param fromNowFlag when true looks back period ms from now into the events array
+ *                    when false looks back from the most recent entry period ms
  * @returns Array of IEventsCount {name, qty}
  */
 export const getEvents = async (period: number, fromNowFlag: boolean = true): Promise<IEventsCount[]> => {
