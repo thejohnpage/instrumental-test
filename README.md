@@ -1,12 +1,12 @@
-#Instrumental Event Counter
-##Notes
+# Instrumental Event Counter
+## Notes
 This is a complete application based on the nodeJS/express Typescript template
 from https://www.npmjs.com/package/express-generator-typescript with auth.  
-##Installation
+## Installation
 It should be possible to clone this repo and `run npm install`.  
 To start the application locally with the correct environment `npm run start:dev`  
 To run the tests for the Event Counter `npm test` note the `nodemon.test.json` file is setup to only run the `/spec/EventCount.spec.ts` file.  
-##Using the App and viewing the Event Counters
+## Using the App and viewing the Event Counters
 If all has gone well you can open the home page of the App by going to `localhost:3000`  
 You should be asked to login and the default `admin` credentials are actually shown below the `login` button. Here they
 are in case you need them :  
@@ -19,12 +19,12 @@ You can change the time period by altering the `minutes` to `seconds` or `ms` th
 altering the preceding value to the quantity of of that unit you wish to use.  
 NOTE: This is only a demo App to show how the Event Counter can be used as
 middleware. The App itself may have bugs and unfinished features.  
-##The Event Counter Library
+## The Event Counter Library
 Located in the `src/monitor/event-counter.ts` file are elements needed to use the Event Counter.  
 The Unit Tests are located in the `spec/EventCounter.spec.ts` file.  
 The middleware use of the Event Counter is located in the `src/shared/CountEvents.ts` file.  
 The API routes to view the Event Counters can be found in the `src/routes/Monitor.ts` file.  
-###Usage
+### Usage
 The middleware file `src/shared/CountEvents.ts` is a good example of how easy it is to incorporate the Events Counter.  
 
 
@@ -77,7 +77,7 @@ There are functions to `deleteEventData` by `eventCounters` object property name
 To clear all counters call `deleteAllEventCounters`  
 Each method and function in `src/monitor/event-counter.ts` has JSDoc comments that explain the purpose
 and arguments.  
-##Future Upgrades, enhancements, things to consider
+## Future Upgrades, enhancements, things to consider
 Even though this implementation can be used in a testing environment, I would suggest switching to
 storage that is not memory constrained for `production` use where there could be millions of events
 second.  
