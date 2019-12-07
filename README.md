@@ -2,6 +2,8 @@
 ## Notes
 This is a complete application based on the nodeJS/express Typescript template
 from https://www.npmjs.com/package/express-generator-typescript with auth.  
+
+See the last section for an alternative design and the trade-offs.  
 ## Installation
 It should be possible to clone this repo and `run npm install`.  
 To start the application locally with the correct environment `npm run start:dev`  
@@ -17,6 +19,10 @@ You will be able to see the event counter values for the API End Points that you
 over the last 2 minutes.  
 You can change the time period by altering the `minutes` to `seconds` or `ms` then
 altering the preceding value to the quantity of of that unit you wish to use.  
+
+Keep refreshing the API call in Postman to see the counters changing as you interact with the site.  
+
+
 NOTE: This is only a demo App to show how the Event Counter can be used as
 middleware. The App itself may have bugs and unfinished features.  
 ## The Event Counter Library
