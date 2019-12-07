@@ -90,9 +90,10 @@ second.
 
 Each entry in the `events` array for a named event consumes 8 bytes (64 bit timestamp). On that basis
 approx 131,000 events per megabyte. For 1M events a second for a 5 minute window is ~2.3GB.  
-
+### Alternative design
 An alternative approach would be to use slots of a specific time size, say 1 minute, and store
 a quantity per minute. The array would contain a 64 bit time value and 64 bit quantity, 16 bytes per minute.
-A 5 minute time window would consume a total of 80 bytes plus overhead, instead of ~2.3GB. The trade off is 
+A 5 minute time window would consume a total of 80 bytes plus overhead irrespective of quantity of events
+(upto max for 64 bits), instead of ~2.3GB for 1M events a second. The trade off is 
 granularity and slightly more complex logic to update the correct time slot and potentially a simplified query
 for a given time period.
